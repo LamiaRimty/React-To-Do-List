@@ -1,0 +1,28 @@
+body {
+    background-color: wheat;
+  }
+  
+  .container {
+    text-align: center;
+    align-items: center;
+    font-family: sans-serif;
+    text-align: center;
+    background-color: whitesmoke;
+    height: 400px;
+    width: 200px;
+    border-radius: 15px;
+    box-shadow: black 0px 1px 5px 0px;
+  }
+  
+  h1 {
+    color: black;
+    background-color: chocolate;
+  }
+  
+  .heading {
+    font-size: 0.75rem;
+    height: 30px;
+    width: 150px;
+    margin: 0px 0px 60px 25px;
+  }
+  
