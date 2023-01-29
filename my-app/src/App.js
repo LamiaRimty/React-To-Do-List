@@ -3,12 +3,9 @@ import { useState } from "react";
 
 function App() {
   const [inputText,setInputText]=useState("");
+  const [todo,SetTodo]=useState([]);
   
-  
-  function handleClick(event){
-    event.preventDefault();
-    console.log("Submitted");
-  }
+
 
   function handleChange(event){
     setInputText(event.target.value);
@@ -19,7 +16,7 @@ function App() {
       <div className="heading">
        <h1>What's your Plan Today?</h1> 
        </div>
-         <form onSubmit={handleClick}>
+         <form onSubmit={todoList}>
            <input
            onChange={handleChange}
             type="text"
@@ -28,17 +25,18 @@ function App() {
             name="text"
             //className="todoInput"
             />
-             <button>
+             <button type="submit"
+             onClick={addTodo} >
                <span>Add</span>
              </button>
-         </form>
+         
           <div>
            <ul>
-              <li>A Item</li>
+             {todos.map((todoItem)=><li>{todoItem}</li>)}
            </ul>
           </div>
+          </form>
     </div>
   );
 }
-
 export default App;
