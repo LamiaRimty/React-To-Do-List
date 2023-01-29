@@ -1,5 +1,6 @@
 body {
     background-color: wheat;
+    text-align: center;
   }
   
   .container {
@@ -17,13 +18,27 @@ body {
   h1 {
     color: black;
     background-color: chocolate;
+    
   }
   
   .heading {
     font-size: 0.75rem;
     height: 30px;
     width: 150px;
-    margin: 0px 0px 60px 25px;
+    /* margin: 0px 0px 60px 25px; */
+    margin:100px;
     text-align: center;
   }
   
+input{
+ margin-top: 20px;
+ border-bottom: dotted chocolate ;
+  }
+
+  button{
+    margin: 5px;
+  }
+  
+  li{
+    /* text-decoration: line-through; */
+  }
