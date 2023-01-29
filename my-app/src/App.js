@@ -3,9 +3,14 @@ import { useState } from "react";
 
 function App() {
   const [inputText,setInputText]=useState("");
-  const [todo,SetTodo]=useState([]);
+  const [todos,SetTodos]=useState([]);
   
+  function addTodo(event){
+    SetTodos((prevTodos)=>{
+      return[...prevTodos,inputText];
+    })
 
+  }
 
   function handleChange(event){
     setInputText(event.target.value);
@@ -16,7 +21,7 @@ function App() {
       <div className="heading">
        <h1>What's your Plan Today?</h1> 
        </div>
-         <form onSubmit={todoList}>
+         <form>
            <input
            onChange={handleChange}
             type="text"
