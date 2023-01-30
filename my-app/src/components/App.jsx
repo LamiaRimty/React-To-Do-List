@@ -16,6 +16,11 @@ function addTodoItem(){
   });
   setInputText("")
 }
+
+function deleteItem(id){
+  console.log("item called delete");
+}
+
   return (
     <div className="container">
       <div className="heading">
@@ -36,7 +41,14 @@ function addTodoItem(){
          
           <div>
            <ul>
-            { todoItems.map((todoItem)=>(<ToDoItem text={todoItem}/>))}
+            { todoItems.map((todoItem,index)=>(
+            <ToDoItem 
+            value={index}
+            key={index}
+            text={todoItem}
+            onChecked={deleteItem}
+            />
+            ))}
            </ul>
           </div>
           </div>
